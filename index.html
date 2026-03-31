@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoExplorer | Global Insight Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🌍 GeoExplorer</h1>
+        <div class="controls">
+            <input type="text" id="search-input" placeholder="Search by name...">
+            <select id="region-filter">
+                <option value="all">All Regions</option>
+                <option value="Africa">Africa</option>
+                <option value="Americas">Americas</option>
+                <option value="Asia">Asia</option>
+                <option value="Europe">Europe</option>
+                <option value="Oceania">Oceania</option>
+            </select>
+            <select id="sort-filter">
+                <option value="az">A - Z</option>
+                <option value="pop">Population (High to Low)</option>
+            </select>
+        </div>
+    </header>
+
+    <main>
+        <div id="loader" class="loader">Loading Countries...</div>
+        <div id="error-msg" class="hidden">Something went wrong. Please try again.</div>
+        <div id="countries-container" class="grid-container"></div>
+    </main>
+
+    <footer>
+        <p>Built with Vanilla JS | Data from REST Countries API</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
