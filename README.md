@@ -156,34 +156,6 @@ cd GeoExplorer
 # Simply open index.html in any modern browser
 ```
 
-> ⚠️ **Note:** Since the app fetches from a live API, open it via a local server (like VS Code's Live Server extension) to avoid potential CORS issues on some browsers.
-
----
-
-## 📸 Screenshots
-
-> *(Screenshots will be added after UI completion)*
-
-| Desktop View | Mobile View |
-|:---:|:---:|
-| `coming soon` | `coming soon` |
-
----
-
-## 🗺 Roadmap
-
-- [x] Project planning & API research
-- [ ] Initial HTML structure
-- [ ] CSS Grid layout (mobile-first)
-- [ ] Fetch API integration & data caching
-- [ ] Search functionality (`.filter()`)
-- [ ] Region filter dropdown
-- [ ] Population & alphabetical sort
-- [ ] Card rendering with flags
-- [ ] Loading state & error handling
-- [ ] Final testing & polish
-- [ ] Deployment
-
 ---
 
 ## 📄 License

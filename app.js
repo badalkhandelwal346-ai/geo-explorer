@@ -12,17 +12,17 @@ async function fetchCountries() {
         if (!response.ok) throw new Error('Network error');
         
         allCountries = await response.json();
-        loader.classList.add('hidden'); // Hide loader
-        displayCountries(allCountries); // Initial render
+        loader.classList.add('hidden'); 
+        displayCountries(allCountries); 
     } catch (error) {
-        loader.innerText = "Failed to load data. ❌";
+        loader.innerText = "Failed to load data.";
         console.error(error);
     }
 }
 
-// 2. Display Function (The "Dynamic Rendering" part)
+// Display Function
 function displayCountries(countries) {
-    countriesContainer.innerHTML = ''; // Clear previous
+    countriesContainer.innerHTML = ''; 
     
     countries.forEach(country => {
         const card = document.createElement('div');
@@ -40,7 +40,7 @@ function displayCountries(countries) {
     });
 }
 
-// 3. Filter and Sort Logic (Higher-Order Functions)
+// Filter and Sort Logic
 function updateUI() {
     let filtered = allCountries.filter(c => 
         c.name.common.toLowerCase().includes(searchInput.value.toLowerCase())
@@ -64,5 +64,5 @@ searchInput.addEventListener('input', updateUI);
 regionFilter.addEventListener('change', updateUI);
 sortFilter.addEventListener('change', updateUI);
 
-// Start the app
+
 fetchCountries();
